@@ -3,6 +3,8 @@ var coverImg = document.querySelector(".cover-image");
 var coverTitle = document.querySelector(".cover-title");
 var coverTaglineOne = document.querySelector(".tagline-1");
 var coverTaglineTwo = document.querySelector(".tagline-2");
+var randomCoverButton = document.querySelector(".random-cover-button");
+
 
 // We've provided a few variables below
 var savedCovers = [
