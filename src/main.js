@@ -10,22 +10,11 @@ var randomCoverButton = document.querySelector(".random-cover-button");
 var savedCovers = [
   new Cover("http://3.bp.blogspot.com/-iE4p9grvfpQ/VSfZT0vH2UI/AAAAAAAANq8/wwQZssi-V5g/s1600/Do%2BNot%2BForsake%2BMe%2B-%2BImage.jpg", "Sunsets and Sorrows", "sunsets", "sorrows")
 ];
-var currentCover = new Cover(randomCoverImg, randomTitle, randomTaglineOne, randomTaglineTwo);
-var randomCoverImg = covers[getRandomIndex(covers)];
-var randomTitle = titles[getRandomIndex(titles)];
-var randomTaglineOne = descriptors[getRandomIndex(descriptors)];
-var randomTaglineTwo = descriptors[getRandomIndex(descriptors)];
+var currentCover;
 
 // Add your event listeners here 👇
-randomCoverButton.addEventListener("click", changeCover);
-/*
-we are looking to make a function (onclick function?)
-the onlick function will reference the function displayCover
+randomCoverButton.addEventListener("click", displayCover);
 
-this function will create AND display a new cover.
-how do we create?
-displayCover function
-*/
 
 
 // Create your event handlers and other functions here 👇
@@ -38,21 +27,16 @@ function getRandomIndex(array) {
 };
 
 
-function displayCover(currentCover) {
+function displayCover() {
+  var randomCoverImg = covers[getRandomIndex(covers)];
+  var randomTitle = titles[getRandomIndex(titles)];
+  var randomTaglineOne = descriptors[getRandomIndex(descriptors)];
+  var randomTaglineTwo = descriptors[getRandomIndex(descriptors)];
+  currentCover += new Cover(randomCoverImg, randomTitle, randomTaglineOne, randomTaglineTwo);
   coverImg.setAttribute("src", randomCoverImg);
   coverTitle.innerText = randomTitle;
   coverTaglineOne.innerText = randomTaglineOne;
   coverTaglineTwo.innerText = randomTaglineTwo;
-  return currentCover;
 };
 
 displayCover();
-
-function changeCover() {
-
-};
-
-
-// randomCoverButton.onclick = function() {
-//
-// }
