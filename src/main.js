@@ -5,7 +5,7 @@ var coverTaglineOne = document.querySelector(".tagline-1");
 var coverTaglineTwo = document.querySelector(".tagline-2");
 var randomCoverButton = document.querySelector(".random-cover-button");
 var formButton = document.querySelector(".make-new-button");
-var saveCoverButtton = document.querySelector(".save-cover-button");
+var saveCoverButton = document.querySelector(".save-cover-button");
 var viewSavedButton = document.querySelector(".view-saved-button");
 var homeButton = document.querySelector(".home-button");
 var homeView = document.querySelector(".home-view");
@@ -23,6 +23,7 @@ var currentCover;
 randomCoverButton.addEventListener("click", displayCover);
 formButton.addEventListener("click", makeYourOwnFormView);
 viewSavedButton.addEventListener("click", viewSavedCovers);
+homeButton.addEventListener("click", enableHomeFromForm);
 
 
 
@@ -32,7 +33,7 @@ function makeYourOwnFormView() {
   formView.classList.toggle("hidden");
   homeView.classList.toggle("hidden");
   randomCoverButton.classList.toggle("hidden");
-  saveCoverButtton.classList.toggle("hidden");
+  saveCoverButton.classList.toggle("hidden");
   formButton.classList.toggle("hidden");
   homeButton.classList.toggle("hidden");
 }
@@ -43,7 +44,18 @@ function viewSavedCovers() {
   randomCoverButton.classList.toggle("hidden");
   viewSavedButton.classList.toggle("hidden");
   homeButton.classList.toggle("hidden");
+  saveCoverButton.classList.toggle("hidden");
 
+
+}
+
+function enableHomeFromForm() {
+  formView.classList.toggle("hidden");
+  homeView.classList.toggle("hidden");
+  homeButton.classList.toggle("hidden");
+  formButton.classList.toggle("hidden");
+  saveCoverButton.classList.toggle("hidden");
+  randomCoverButton.classList.toggle("hidden");
 }
 
 
