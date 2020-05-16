@@ -5,10 +5,12 @@ var coverTaglineOne = document.querySelector(".tagline-1");
 var coverTaglineTwo = document.querySelector(".tagline-2");
 var randomCoverButton = document.querySelector(".random-cover-button");
 var formButton = document.querySelector(".make-new-button");
-var saveCoverButtton = document.querySelector(".save-cover-button");
+var saveCoverButton = document.querySelector(".save-cover-button");
+var viewSavedButton = document.querySelector(".view-saved-button");
 var homeButton = document.querySelector(".home-button");
 var homeView = document.querySelector(".home-view");
 var formView = document.querySelector(".form-view");
+var savedView = document.querySelector(".saved-view");
 
 
 // We've provided a few variables below
@@ -20,6 +22,9 @@ var currentCover;
 // Add your event listeners here 👇
 randomCoverButton.addEventListener("click", displayCover);
 formButton.addEventListener("click", makeYourOwnFormView);
+viewSavedButton.addEventListener("click", viewSavedCovers);
+homeButton.addEventListener("click", enableHomeFromForm);
+
 
 
 
@@ -29,11 +34,42 @@ function makeYourOwnFormView() {
   formView.classList.toggle("hidden");
   homeView.classList.toggle("hidden");
   randomCoverButton.classList.toggle("hidden");
-  saveCoverButtton.classList.toggle("hidden");
-  formButton.classList.toggle("hidden"); 
+  saveCoverButton.classList.toggle("hidden");
+  formButton.classList.toggle("hidden");
   homeButton.classList.toggle("hidden");
 }
 
+function viewSavedCovers() {
+  savedView.classList.toggle("hidden");
+  homeView.classList.toggle("hidden");
+  randomCoverButton.classList.toggle("hidden");
+  viewSavedButton.classList.toggle("hidden");
+  homeButton.classList.toggle("hidden");
+  saveCoverButton.classList.toggle("hidden");
+}
+
+function enableHomeFromForm() {
+  formView.classList.toggle("hidden");
+  homeView.classList.toggle("hidden");
+  homeButton.classList.toggle("hidden");
+  formButton.classList.toggle("hidden");
+  saveCoverButton.classList.toggle("hidden");
+  randomCoverButton.classList.toggle("hidden");
+}
+
+//the viewSavedFromForm button is showing us a weird half home page
+//thing instead of the correct saved covers page that can be properly
+//accessed from the start page. want to know why, and see if we need any
+//if else statement now that we are stacking toggles on top of toggles.
+
+function viewSavedFromForm() {
+  formView.classList.toggle("hidden");
+  savedView.classList.toggle("hidden");
+  homeButton.classList.toggle("hidden");
+  formButton.classList.toggle("hidden");
+  saveCoverButton.classList.toggle("hidden");
+  randomCoverButton.classList.toggle("hidden");
+}
 
 
 // We've provided one function to get you started
