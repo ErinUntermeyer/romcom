@@ -6,9 +6,11 @@ var coverTaglineTwo = document.querySelector(".tagline-2");
 var randomCoverButton = document.querySelector(".random-cover-button");
 var formButton = document.querySelector(".make-new-button");
 var saveCoverButtton = document.querySelector(".save-cover-button");
+var viewSavedButton = document.querySelector(".view-saved-button");
 var homeButton = document.querySelector(".home-button");
 var homeView = document.querySelector(".home-view");
 var formView = document.querySelector(".form-view");
+var savedView = document.querySelector(".saved-view");
 
 
 // We've provided a few variables below
@@ -20,6 +22,7 @@ var currentCover;
 // Add your event listeners here 👇
 randomCoverButton.addEventListener("click", displayCover);
 formButton.addEventListener("click", makeYourOwnFormView);
+viewSavedButton.addEventListener("click", viewSavedCovers);
 
 
 
@@ -30,8 +33,17 @@ function makeYourOwnFormView() {
   homeView.classList.toggle("hidden");
   randomCoverButton.classList.toggle("hidden");
   saveCoverButtton.classList.toggle("hidden");
-  formButton.classList.toggle("hidden"); 
+  formButton.classList.toggle("hidden");
   homeButton.classList.toggle("hidden");
+}
+
+function viewSavedCovers() {
+  savedView.classList.toggle("hidden");
+  homeView.classList.toggle("hidden");
+  randomCoverButton.classList.toggle("hidden");
+  viewSavedButton.classList.toggle("hidden");
+  homeButton.classList.toggle("hidden");
+
 }
 
 
