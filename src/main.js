@@ -27,6 +27,7 @@ homeButton.addEventListener("click", enableHomeFromForm);
 
 
 
+
 // Create your event handlers and other functions here 👇
 
 function makeYourOwnFormView() {
@@ -45,8 +46,6 @@ function viewSavedCovers() {
   viewSavedButton.classList.toggle("hidden");
   homeButton.classList.toggle("hidden");
   saveCoverButton.classList.toggle("hidden");
-
-
 }
 
 function enableHomeFromForm() {
@@ -58,6 +57,19 @@ function enableHomeFromForm() {
   randomCoverButton.classList.toggle("hidden");
 }
 
+//the viewSavedFromForm button is showing us a weird half home page
+//thing instead of the correct saved covers page that can be properly
+//accessed from the start page. want to know why, and see if we need any
+//if else statement now that we are stacking toggles on top of toggles.
+
+function viewSavedFromForm() {
+  formView.classList.toggle("hidden");
+  savedView.classList.toggle("hidden");
+  homeButton.classList.toggle("hidden");
+  formButton.classList.toggle("hidden");
+  saveCoverButton.classList.toggle("hidden");
+  randomCoverButton.classList.toggle("hidden");
+}
 
 
 // We've provided one function to get you started
