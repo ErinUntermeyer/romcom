@@ -5,6 +5,8 @@ var coverTaglineOne = document.querySelector(".tagline-1");
 var coverTaglineTwo = document.querySelector(".tagline-2");
 var randomCoverButton = document.querySelector(".random-cover-button");
 var formButton = document.querySelector(".make-new-button");
+var saveCoverButtton = document.querySelector(".save-cover-button");
+var homeButton = document.querySelector(".home-button");
 var homeView = document.querySelector(".home-view");
 var formView = document.querySelector(".form-view");
 
@@ -26,7 +28,13 @@ formButton.addEventListener("click", makeYourOwnFormView);
 function makeYourOwnFormView() {
   formView.classList.toggle("hidden");
   homeView.classList.toggle("hidden");
+  randomCoverButton.classList.toggle("hidden");
+  saveCoverButtton.classList.toggle("hidden");
+  formButton.classList.toggle("hidden"); 
+  homeButton.classList.toggle("hidden");
 }
+
+
 
 // We've provided one function to get you started
 function getRandomIndex(array) {
