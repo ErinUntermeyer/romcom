@@ -21,56 +21,67 @@ var currentCover;
 
 // Add your event listeners here 👇
 randomCoverButton.addEventListener("click", displayCover);
-formButton.addEventListener("click", makeYourOwnFormView);
-viewSavedButton.addEventListener("click", viewSavedCovers);
-homeButton.addEventListener("click", enableHomeFromForm);
+formButton.addEventListener("click", viewFormButton);
+viewSavedButton.addEventListener("click", viewSavedCoversButton);
+homeButton.addEventListener("click", viewHomeButton);
 
 
 
 
 // Create your event handlers and other functions here 👇
 
-function makeYourOwnFormView() {
-  formView.classList.toggle("hidden");
-  homeView.classList.toggle("hidden");
-  randomCoverButton.classList.toggle("hidden");
-  saveCoverButton.classList.toggle("hidden");
-  formButton.classList.toggle("hidden");
-  homeButton.classList.toggle("hidden");
+function viewFormButton() {
+  if (homeView.classList[2] !== "hidden") {
+    homeView.classList.toggle("hidden");
+    formView.classList.toggle("hidden");
+    randomCoverButton.classList.toggle("hidden");
+    saveCoverButton.classList.toggle("hidden");
+    formButton.classList.toggle("hidden");
+    homeButton.classList.toggle("hidden");
+  }
+  if (savedView.classList[2] !== "hidden") {
+    formView.classList.toggle("hidden");
+    savedView.classList.toggle("hidden");
+    formButton.classList.toggle("hidden");
+    viewSavedButton.classList.toggle("hidden");
+  }
 }
 
-function viewSavedCovers() {
-  savedView.classList.toggle("hidden");
-  homeView.classList.toggle("hidden");
-  randomCoverButton.classList.toggle("hidden");
-  viewSavedButton.classList.toggle("hidden");
-  homeButton.classList.toggle("hidden");
-  saveCoverButton.classList.toggle("hidden");
+function viewSavedCoversButton() {
+  if (homeView.classList[2] !== "hidden") {
+    homeView.classList.toggle("hidden");
+    savedView.classList.toggle("hidden");
+    randomCoverButton.classList.toggle("hidden");
+    viewSavedButton.classList.toggle("hidden");
+    homeButton.classList.toggle("hidden");
+    saveCoverButton.classList.toggle("hidden");
+  }
+  if (formView.classList[2] !== "hidden") {
+    formView.classList.toggle("hidden");
+    savedView.classList.toggle("hidden");
+    formButton.classList.toggle("hidden");
+    viewSavedButton.classList.toggle("hidden");
+  }
 }
 
-function enableHomeFromForm() {
-  formView.classList.toggle("hidden");
-  homeView.classList.toggle("hidden");
-  homeButton.classList.toggle("hidden");
-  formButton.classList.toggle("hidden");
-  saveCoverButton.classList.toggle("hidden");
-  randomCoverButton.classList.toggle("hidden");
+function viewHomeButton() {
+  if (formView.classList[2] !== "hidden") {
+    formView.classList.toggle("hidden");
+    homeView.classList.toggle("hidden");
+    homeButton.classList.toggle("hidden");
+    formButton.classList.toggle("hidden");
+    saveCoverButton.classList.toggle("hidden");
+    randomCoverButton.classList.toggle("hidden");
+  }
+  if (savedView.classList[2] !== "hidden") {
+    savedView.classList.toggle("hidden");
+    homeView.classList.toggle("hidden");
+    homeButton.classList.toggle("hidden");
+    saveCoverButton.classList.toggle("hidden");
+    randomCoverButton.classList.toggle("hidden");
+    viewSavedButton.classList.toggle("hidden");
+  }
 }
-
-//the viewSavedFromForm button is showing us a weird half home page
-//thing instead of the correct saved covers page that can be properly
-//accessed from the start page. want to know why, and see if we need any
-//if else statement now that we are stacking toggles on top of toggles.
-
-function viewSavedFromForm() {
-  formView.classList.toggle("hidden");
-  savedView.classList.toggle("hidden");
-  homeButton.classList.toggle("hidden");
-  formButton.classList.toggle("hidden");
-  saveCoverButton.classList.toggle("hidden");
-  randomCoverButton.classList.toggle("hidden");
-}
-
 
 // We've provided one function to get you started
 function getRandomIndex(array) {
