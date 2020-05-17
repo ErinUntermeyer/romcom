@@ -1,8 +1,9 @@
 ---
-title: RomCom - Pair
+RomCom
 ---
+Erin Untermeyer and Brigette Doelp Pair-Project Mod 1
 
-## Learning Goals
+## Objective
 
 * Write clean, DRY JavaScript to store our data
 * Use a provided class by creating object instances using the `new` keyword
@@ -14,39 +15,19 @@ title: RomCom - Pair
 
 People say that romance novels are formulaic. Well ... maybe that's true. We're going to make an app that generates romance novel covers!
 
-## Set Up
+## Timeline
 
-To begin, choose ONE PARTNER to do the following:
+Our focus is on complete understanding of the code we write and implemenation of concepts.  We agreed after each iteration we would make an effort to refactor so we can submit clean, DRY code.  The following is our progression as the project advanced.
 
-1. Fork this boilerplate repository
-2. Clone down your new, forked repo
-3. `cd` into the repository
-4. Open it in your text editor
-5. View the project in the browser by running `open index.html` in your terminal
-5. Add all project partners and your assigned instructor as collaborators on the repository
+* 5/12/2020 - Wrote the DTR, made rough timeline, reviewed project goals and rubric.
+* 5/13/2020 - Reviewed Iteration 0, completed pseudocode, wrote skeleton for Random Cover function, listed takeaways for independant research.
+* 5/14/2020 - Discussed research, created variables to access HTML, wrote an event listener for page load, wrote functions to generate random cover.  At this point, we required more research to get function working.  Made list of takeaways for independant research.
+* 5/15/2020 - Removed event listener as it was not needed.  Got random cover on page load working.  Enabled "Show New Random Cover" button by moving variables created to generate random cover from global variables to inside the display cover function.  Reviewed Iteration 2 and made list of takeaways for independant research.
+* 5/16/2020 - Created more variables to access HTML, added event listener, wrote function to toggle from home view to form page.  Made further progress with enabling page navigation.  Came up with two solutions for enable all buttons and independantly researched each.
 
-Then, as a team:
+## Resources
 
-* Explore the repository to see what's going on in the code
-  - Look at each file: `index.html`, `styles.css`, `data.js`, `Cover.js`, `main.js`
-  - _Note: no imports or exports are needed because each JS file is linked in the HTML_
-  - Even if you don't know what each piece of the code is doing, talk through what you think is going on
-* What pieces of code might you use to complete iterations, and what pieces will you have to create?
-* All of your work will take place in `main.js` - you will not need to change any other files!
 
-## Day 1 Deliverables
-
-By the end of the day, complete the following tasks:
-
-* As a team, read the entire project spec and rubric
-* As a team, create a rough timeline to follow 
-* As a team, create a public document for your DTR (instructions can be found [here](https://github.com/turingschool/career-development-curriculum/blob/master/module_one/dtr_guidelines_memo.md))
-* Make sure all teammates are added as collaborators to the forked repository
-* Create a private Slack channel with all members of the project AND your assigned instructor and share links to:
-  - the forked GitHub repo
-  - the GitHub Pages deployed site
-    - Under your repo's settings, scroll down to GitHub Pages and set it up to deploy your master branch
-  - the DTR
 
 ## Progression
 
