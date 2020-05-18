@@ -17,7 +17,7 @@ People say that romance novels are formulaic. Well ... maybe that's true. We're 
 
 ## Timeline
 
-Our focus is on complete understanding of the code we write and implemenation of concepts.  We agreed after each iteration we would make an effort to refactor so we can submit clean, DRY code.  The following is our progression as the project advanced.
+Our focus is on complete understanding of the code we write and implemenation of concepts.  We agreed after each iteration we would make an effort to refactor so we can submit clean, DRY code.  Below is our progression as the project advanced.
 
 ## Progression
 
