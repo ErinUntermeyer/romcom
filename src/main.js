@@ -13,6 +13,11 @@ var homeView = document.querySelector(".home-view");
 var formView = document.querySelector(".form-view");
 var savedView = document.querySelector(".saved-view");
 
+var createCoverImg = document.querySelector("#cover");
+var createTitle = document.querySelector("#title");
+var createDescriptor1 = document.querySelector("#descriptor1");
+var createDescriptor2 = document.querySelector("#descriptor2");
+
 
 // We've provided a few variables below
 var savedCovers = [
@@ -79,7 +84,7 @@ function viewHomeButton() {
 }
 
 function createBook() {
-  
+
 }
 
 // We've provided one function to get you started
