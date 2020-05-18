@@ -8,6 +8,7 @@ var formButton = document.querySelector(".make-new-button");
 var saveCoverButton = document.querySelector(".save-cover-button");
 var viewSavedButton = document.querySelector(".view-saved-button");
 var homeButton = document.querySelector(".home-button");
+var newBookButton = document.querySelector(".create-new-book-button");
 var homeView = document.querySelector(".home-view");
 var formView = document.querySelector(".form-view");
 var savedView = document.querySelector(".saved-view");
@@ -24,6 +25,7 @@ randomCoverButton.addEventListener("click", displayCover);
 formButton.addEventListener("click", viewFormButton);
 viewSavedButton.addEventListener("click", viewSavedCoversButton);
 homeButton.addEventListener("click", viewHomeButton);
+newBookButton.addEventListener("click", createBook);
 
 
 // Create your event handlers and other functions here 👇
@@ -74,6 +76,10 @@ function viewHomeButton() {
   } else if (savedView.classList[2] !== "hidden") {
     homeAndSave();
   }
+}
+
+function createBook() {
+  
 }
 
 // We've provided one function to get you started
