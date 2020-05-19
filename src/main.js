@@ -13,10 +13,10 @@ var homeView = document.querySelector(".home-view");
 var formView = document.querySelector(".form-view");
 var savedView = document.querySelector(".saved-view");
 
-var createCoverImg = document.querySelector("#cover");
-var createTitle = document.querySelector("#title");
-var createDescriptor1 = document.querySelector("#descriptor1");
-var createDescriptor2 = document.querySelector("#descriptor2");
+// var createCoverImg = document.querySelector("#cover").value;
+// var createTitle = document.querySelector(".user-title").value;
+// var createDescriptor1 = document.querySelector("#descriptor1").value;
+// var createDescriptor2 = document.querySelector("#descriptor2").value;
 
 
 // We've provided a few variables below
@@ -84,6 +84,18 @@ function viewHomeButton() {
 }
 
 function createBook() {
+  event.preventDefault()
+
+  var createCoverImg = document.querySelector("#cover").value;
+  var createTitle = document.querySelector(".user-title").value;
+  var createDescriptor1 = document.querySelector("#descriptor1").value;
+  var createDescriptor2 = document.querySelector("#descriptor2").value;
+
+  covers.push(createCoverImg);
+  titles.push(createTitle);
+  descriptors.push(createDescriptor1);
+  descriptors.push(createDescriptor2);
+
 
 }
 
