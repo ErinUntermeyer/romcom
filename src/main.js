@@ -8,9 +8,15 @@ var formButton = document.querySelector(".make-new-button");
 var saveCoverButton = document.querySelector(".save-cover-button");
 var viewSavedButton = document.querySelector(".view-saved-button");
 var homeButton = document.querySelector(".home-button");
+var newBookButton = document.querySelector(".create-new-book-button");
 var homeView = document.querySelector(".home-view");
 var formView = document.querySelector(".form-view");
 var savedView = document.querySelector(".saved-view");
+
+// var createCoverImg = document.querySelector("#cover").value;
+// var createTitle = document.querySelector(".user-title").value;
+// var createDescriptor1 = document.querySelector("#descriptor1").value;
+// var createDescriptor2 = document.querySelector("#descriptor2").value;
 
 
 // We've provided a few variables below
@@ -24,6 +30,7 @@ randomCoverButton.addEventListener("click", displayCover);
 formButton.addEventListener("click", viewFormButton);
 viewSavedButton.addEventListener("click", viewSavedCoversButton);
 homeButton.addEventListener("click", viewHomeButton);
+newBookButton.addEventListener("click", createBook);
 
 
 // Create your event handlers and other functions here 👇
@@ -74,6 +81,26 @@ function viewHomeButton() {
   } else if (savedView.classList[2] !== "hidden") {
     homeAndSave();
   }
+}
+
+function createBook() {
+  event.preventDefault();
+
+  var createCoverImg = document.querySelector("#cover").value;
+  var createTitle = document.querySelector("#title").value;
+  var createDescriptor1 = document.querySelector("#descriptor1").value;
+  var createDescriptor2 = document.querySelector("#descriptor2").value;
+  covers.push(createCoverImg);
+  titles.push(createTitle);
+  descriptors.push(createDescriptor1);
+  descriptors.push(createDescriptor2);
+  var createdCover = new Cover(createCoverImg, createTitle, createDescriptor1, createDescriptor2);
+  coverImg.setAttribute("src", createCoverImg);
+  coverTitle.innerText = createTitle;
+  coverTaglineOne.innerText = createDescriptor1;
+  coverTaglineTwo.innerText = createDescriptor2;
+
+  homeAndForm()
 }
 
 // We've provided one function to get you started
