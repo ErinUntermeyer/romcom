@@ -84,19 +84,23 @@ function viewHomeButton() {
 }
 
 function createBook() {
-  event.preventDefault()
+  event.preventDefault();
 
   var createCoverImg = document.querySelector("#cover").value;
-  var createTitle = document.querySelector(".user-title").value;
+  var createTitle = document.querySelector("#title").value;
   var createDescriptor1 = document.querySelector("#descriptor1").value;
   var createDescriptor2 = document.querySelector("#descriptor2").value;
-
   covers.push(createCoverImg);
   titles.push(createTitle);
   descriptors.push(createDescriptor1);
   descriptors.push(createDescriptor2);
+  var createdCover = new Cover(createCoverImg, createTitle, createDescriptor1, createDescriptor2);
+  coverImg.setAttribute("src", createCoverImg);
+  coverTitle.innerText = createTitle;
+  coverTaglineOne.innerText = createDescriptor1;
+  coverTaglineTwo.innerText = createDescriptor2;
 
-
+  homeAndForm()
 }
 
 // We've provided one function to get you started
