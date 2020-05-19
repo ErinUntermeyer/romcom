@@ -1,4 +1,3 @@
-// Create variables targetting the relevant DOM elements here 👇
 var coverImg = document.querySelector(".cover-image");
 var coverTitle = document.querySelector(".cover-title");
 var coverTaglineOne = document.querySelector(".tagline-1");
@@ -12,28 +11,41 @@ var newBookButton = document.querySelector(".create-new-book-button");
 var homeView = document.querySelector(".home-view");
 var formView = document.querySelector(".form-view");
 var savedView = document.querySelector(".saved-view");
-
-// var createCoverImg = document.querySelector("#cover").value;
-// var createTitle = document.querySelector(".user-title").value;
-// var createDescriptor1 = document.querySelector("#descriptor1").value;
-// var createDescriptor2 = document.querySelector("#descriptor2").value;
-
-
-// We've provided a few variables below
 var savedCovers = [
   new Cover("http://3.bp.blogspot.com/-iE4p9grvfpQ/VSfZT0vH2UI/AAAAAAAANq8/wwQZssi-V5g/s1600/Do%2BNot%2BForsake%2BMe%2B-%2BImage.jpg", "Sunsets and Sorrows", "sunsets", "sorrows")
 ];
-var currentCover;
 
-// Add your event listeners here 👇
+window.onload = displayCover;
 randomCoverButton.addEventListener("click", displayCover);
 formButton.addEventListener("click", viewFormButton);
 viewSavedButton.addEventListener("click", viewSavedCoversButton);
 homeButton.addEventListener("click", viewHomeButton);
 newBookButton.addEventListener("click", createBook);
 
+function viewFormButton() {
+  if (homeView.classList[2] !== "hidden") {
+    homeAndForm();
+  } else if (savedView.classList[2] !== "hidden") {
+    formAndSave();
+  }
+};
 
-// Create your event handlers and other functions here 👇
+function viewSavedCoversButton() {
+  if (homeView.classList[2] !== "hidden") {
+    homeAndSave();
+  } else if (formView.classList[2] !== "hidden") {
+    formAndSave();
+  }
+};
+
+function viewHomeButton() {
+  if (formView.classList[2] !== "hidden") {
+    homeAndForm();
+  } else if (savedView.classList[2] !== "hidden") {
+    homeAndSave();
+  }
+};
+
 function formAndSave() {
   formView.classList.toggle("hidden");
   savedView.classList.toggle("hidden");
@@ -59,33 +71,8 @@ function homeAndSave() {
   saveCoverButton.classList.toggle("hidden");
 };
 
-function viewFormButton() {
-  if (homeView.classList[2] !== "hidden") {
-    homeAndForm();
-  } else if (savedView.classList[2] !== "hidden") {
-    formAndSave();
-  }
-}
-
-function viewSavedCoversButton() {
-  if (homeView.classList[2] !== "hidden") {
-    homeAndSave();
-  } else if (formView.classList[2] !== "hidden") {
-    formAndSave();
-  }
-}
-
-function viewHomeButton() {
-  if (formView.classList[2] !== "hidden") {
-    homeAndForm();
-  } else if (savedView.classList[2] !== "hidden") {
-    homeAndSave();
-  }
-}
-
 function createBook() {
   event.preventDefault();
-
   var createCoverImg = document.querySelector("#cover").value;
   var createTitle = document.querySelector("#title").value;
   var createDescriptor1 = document.querySelector("#descriptor1").value;
@@ -99,11 +86,9 @@ function createBook() {
   coverTitle.innerText = createTitle;
   coverTaglineOne.innerText = createDescriptor1;
   coverTaglineTwo.innerText = createDescriptor2;
+  homeAndForm();
+};
 
-  homeAndForm()
-}
-
-// We've provided one function to get you started
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
@@ -113,11 +98,9 @@ function displayCover() {
   var randomTitle = titles[getRandomIndex(titles)];
   var randomTaglineOne = descriptors[getRandomIndex(descriptors)];
   var randomTaglineTwo = descriptors[getRandomIndex(descriptors)];
-  currentCover += new Cover(randomCoverImg, randomTitle, randomTaglineOne, randomTaglineTwo);
+  var currentCover = new Cover(randomCoverImg, randomTitle, randomTaglineOne, randomTaglineTwo);
   coverImg.setAttribute("src", randomCoverImg);
   coverTitle.innerText = randomTitle;
   coverTaglineOne.innerText = randomTaglineOne;
   coverTaglineTwo.innerText = randomTaglineTwo;
 };
-
-displayCover();
