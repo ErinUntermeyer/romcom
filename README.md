@@ -40,12 +40,12 @@ This website generates and creates new romance novel covers.
 
 The first feature of the website is generating a new random cover at the click of a button. When you click the 'Show New Random Cover' button, a new cover will be generated for you.
 
-![alt text](https://imgur.com/l7ObC2N)
+![alt text][Imgur](https://imgur.com/sEUjGo0)
 
 The second feature of the website is allowing users to enter their own images and text to generate a custom cover.
 
-![alt text](https://imgur.com/RpvR8NH)
+![alt text][Imgur](https://imgur.com/1lZZno3)
 
 Lastly, the buttons on the website navigate the user to the designated pages.
 
-![alt text](https://imgur.com/SukGfLY)
+![alt text][Imgur](https://imgur.com/N3bt16C)
